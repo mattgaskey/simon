@@ -1,0 +1,52 @@
+body {
+	min-height: 100vh;
+	margin: 0;
+}
+
+.container {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0;
+}
+
+.grid-block {
+	width: 50vw;
+	height: 50vh;
+	margin: 0;
+	flex: 1 1 auto;
+	cursor: pointer;
+}
+
+.red {
+	background: red;
+}
+
+.blue {
+	background: blue;
+}
+
+.yellow {
+	background: yellow;
+}
+
+.green {
+	background: green;
+}
+
+.controls {
+	width: 30vw;
+	height: 50vh;
+	position: absolute;
+	top: 25%;
+	border-radius: 100%;
+	left: calc(50% - 15vw);
+	text-align: center;
+	background: white;
+	z-index: 9999;
+	line-height: 50vh;
+	font-size: 3em;
+}
