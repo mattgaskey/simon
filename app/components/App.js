@@ -2,7 +2,6 @@ var React = require('react');
 require('../index.css');
 var ReactRouter = require('react-router-dom');
 
-
 //Each game square is a component
 class GridBlock extends React.Component {
 
@@ -10,7 +9,10 @@ class GridBlock extends React.Component {
 		super(props);
 
 		this.state = {
-			flash: ''
+			red: false,
+			blue: false,
+			green: false,
+			yellow: false
 		}
 
 		this.handleClick = this.handleClick.bind(this);
@@ -28,6 +30,7 @@ class GridBlock extends React.Component {
 			if (this.props.init) {
 				componentClasses.push('flash');
 			}
+		
 
 		return(
 			<div 
@@ -233,18 +236,22 @@ class App extends React.Component {
 				<GridBlock color='red' 
 					playerMove={this.updatePlayerSequence}
 					init={this.state.initState}
+					sequence={this.state.matchSequence}
 				/>
 				<GridBlock color='blue' 
 					playerMove={this.updatePlayerSequence}
 					init={this.state.initState}
+					sequence={this.state.matchSequence}
 				/>
 				<GridBlock color='green' 
 					playerMove={this.updatePlayerSequence}  
 					init={this.state.initState}
+					sequence={this.state.matchSequence}
 				/>
 				<GridBlock color='yellow' 
 					playerMove={this.updatePlayerSequence} 
 					init={this.state.initState}
+					sequence={this.state.matchSequence}
 				/>
 				<Controls 
 					round={this.state.round}
